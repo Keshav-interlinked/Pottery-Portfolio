@@ -13,8 +13,7 @@ def login(request):
         username = request.POST['username']
         password = request.POST['password']
         
-        # Add your authentication logic here
-        # For now, we'll just render the login page again   
+         
 
         # Save to database
         LoginData.objects.create(
@@ -36,8 +35,7 @@ def signup(request):
         password = request.POST['password']
         gender = request.POST['gender']
         dob = request.POST['dob']
-        # Add your authentication logic here
-        # For now, we'll just render the login page again   
+         
 
         # Save to database
         SignupData.objects.create(
