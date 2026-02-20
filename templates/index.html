@@ -1,0 +1,64 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Pottery Portfolio</h1>
+      <div class="anchors">
+        <a href="">Home</a>
+        <a href="login">Login</a>
+        <a href="signup">Sign Up</a>
+      </div>
+    </div>
+    <div class="main_body">
+      {% for post in posts%}
+      <div class="card1 box">
+        <img
+          src="{{ post.img_url}}"
+          alt=""
+          style="
+            width: 205px;
+            height: 177px;
+            object-fit: cover;
+            border-radius: 16px;
+          "
+        />
+        <p style="color: white">Name: {{ post.title }}</p>
+
+        <p style="color: white">Posted at: {{ post.posted_at }}</p>
+        <a href="" style="text-decoration: none; color: white"
+          >more details...</a
+        >
+      </div>
+      {% endfor %}
+
+      <!-- <div class="box card2">
+        <img src="" alt="" />
+        <h3>Name:</h3>
+        <a href="">more details</a>
+      </div>
+      <div class="box card3">
+        <img src="" alt="" />
+        <h3>Name:</h3>
+        <a href="">more details</a>
+      </div>
+      <div class="box card4">
+        <img src="" alt="" />
+        <h3>Name:</h3>
+        <a href="">more details</a>
+      </div>
+      <div class="box card5">
+        <img src="" alt="" />
+        <h3>Name:</h3>
+        <a href="">more details</a>
+      </div> -->
+    </div>
+  </body>
+</html>
